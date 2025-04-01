@@ -3,9 +3,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    width: 450px;
     margin: 50px 30px 50px 50px;
-    text-align: center;
 }
 .calculator__input-group {
     display: flex;

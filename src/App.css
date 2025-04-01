@@ -34,12 +34,11 @@
   }
 }
 
-.App__container {
-  display: flex; 
-  justify-content: flex-start; 
-  align-items: flex-start; 
-  gap: 150px; 
-  padding: 20px;
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .calculator__main-box {

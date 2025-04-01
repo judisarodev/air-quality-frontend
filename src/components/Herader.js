@@ -3,7 +3,6 @@ import { PiPottedPlantFill } from "react-icons/pi";
 
 const header = {
     backgroundColor: '#2C7DA0',
-    width: '100%',
     padding: '18px',
     display: 'flex',
     gap: '12px'
@@ -17,10 +16,12 @@ const headerText = {
 
 const Header = () => {
     return(
-        <header style={header}>
-            <PiPottedPlantFill color="white" size={25} />
-            <p style={headerText}>Calidad del Aire en Bogotá</p>
-        </header>
+        <div>
+            <header style={header}>
+                <PiPottedPlantFill color="white" size={25} />
+                <p style={headerText}>Calidad del Aire en Bogotá</p>
+            </header>
+        </div>
     )
 }
 

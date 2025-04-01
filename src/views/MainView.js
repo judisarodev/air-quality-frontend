@@ -1,11 +1,15 @@
 import React from "react";
-import { Header } from "../components/Herader";
 import { Login } from "../components/Login";
+import { TimeLine } from "../components/TimeLine";
+import './../styles/mainview.css'
 
 const MainView = () =>{
     return(<>
-        <Header />
-        <Login />
+        <div className="main-view__content-container">
+            <Login/>
+            <TimeLine />
+        </div>
+        
     </>)
 }
 
