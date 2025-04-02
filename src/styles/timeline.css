@@ -3,12 +3,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .timeline__output{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     max-width: 500px;
@@ -47,4 +49,17 @@
 .timeline__hour p {
     padding: 6px;
     margin: 0px;
+}
+
+@media (max-width: 775px) {
+    .timeline__times {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+.timeline__times::-webkit-scrollbar {
+    height: 6px;
 }

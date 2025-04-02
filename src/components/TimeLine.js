@@ -28,7 +28,7 @@ const TimeLine = () => {
 
         <div className='timeline__output'>
             <h2>Conoce las recomendaciones según el nivel de calidad del aire para cada hora del día</h2>
-            <div><img src={image} width={'300px'} alt='Imagen familia'/></div>
+            <div><img src={image} width={'200px'} alt='Imagen familia'/></div>
             <p>Para las 4 pm del 29/03/2025 se prevee un pico en contaminante PM2</p>
             <p className='timeline__output--alert'>¡Ciudado! No salgas de casa sin tapabocas</p>
         </div>

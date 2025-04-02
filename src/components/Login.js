@@ -12,6 +12,7 @@ const Login = () => {
             <div>
                 <Input label={'Correo electrónico'} type={'text'}/>
                 <Input label={'Contraseña'} type={'password'}/>
+                <a href="/">¿Olivaste tu contraseña?</a>
             </div>
             <div>
                 <Button text={'INGRESAR'}/>
