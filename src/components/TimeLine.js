@@ -9,7 +9,6 @@ const TimeLine = () => {
 
     React.useEffect(() => {
         setActiveIndex(0);
-        console.log('a', activeIndex);
     }, [])
 
     return(<div className='timeline__container'>
@@ -20,7 +19,7 @@ const TimeLine = () => {
                 backgroundColor: active ? '#90BE6D' : 'white',
                 color: active ? 'white': 'black',
             }
-            return(<div style={styles} className='timeline__hour' onClick={() => setActiveIndex(index)}>
+            return(<div style={styles} key={index} className='timeline__hour' onClick={() => setActiveIndex(index)}>
                 <p>{ t }</p>
             </div>);
         })}

@@ -1,9 +1,7 @@
 import React from 'react'
 import './../styles/button.css'
-import { Navigate, useNavigate } from 'react-router-dom';
 
 const Button = ({ text, primary = true, icon, action }) => {
-    const navigate = useNavigate();
 
     const styles = {
         backgroundColor: primary ? '#90BE6D' : 'white',
@@ -12,7 +10,7 @@ const Button = ({ text, primary = true, icon, action }) => {
     }
 
     return(<>
-        <button type='button' className='btn' onClick={() => navigate("/about")} style={styles}><span>{ icon }</span><p>{ text }</p></button>
+        <button type='button' className='btn' onClick={action} style={styles}><span>{ icon }</span><p>{ text }</p></button>
     </>);
 }
 

@@ -1,12 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import { useState } from 'react';
 import {MainView} from './views/MainView.js'
 import {CalculatorView} from './views/CalculatorView.js'
 import { Header } from './components/Herader.js';
 import { Footer } from './components/Footer.js';
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { MapView } from './views/MapView.js';
 
 
 function App() {
@@ -16,7 +14,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<MainView />} />
-          <Route path="/about" element={<CalculatorView />} />
+          <Route path="/mapa" element={<MapView />} />
+          <Route path="/calculadora" element={<CalculatorView />} />
         </Routes>
       </Router>
       <Footer />
