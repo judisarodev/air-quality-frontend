@@ -35,5 +35,8 @@
     height: 520px;
     z-index: 10;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   

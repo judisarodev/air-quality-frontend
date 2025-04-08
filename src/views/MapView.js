@@ -4,9 +4,11 @@ import './../styles/mapview.css'
 import { Input } from '../components/Input';
 import { Button } from '../components/Button';
 import { Select } from '../components/Select';
+import img0 from './../assets/good1.jpeg'
 import img1 from './../assets/good.jpg'
 import img2 from './../assets/median.jpg'
 import img3 from './../assets/bad.jpeg'
+import img4 from './../assets/bad2.jpeg'
 
 const MapView = () => {
     const bogota = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.39472301613!2d-74.27262210527678!3d4.648620637636398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1744150626752!5m2!1ses!2sco';
@@ -36,7 +38,7 @@ const MapView = () => {
         {
             title: "Calidad del Aire Buena (0–50 AQI): ¡Disfruta al Aire Libre!",
             description: "Es seguro realizar actividades al aire libre como caminar, correr, andar en bicicleta o hacer picnic. Puedes ventilar tu casa abriendo ventanas y aprovechar el día para pasar tiempo en la naturaleza.",
-            img: img1,
+            img: img0,
         },
         {
             title: "Calidad del Aire Moderada (51–100 AQI): Precaución para Sensibles",
@@ -51,23 +53,23 @@ const MapView = () => {
         {
             title: "Calidad del Aire Dañina (151–200 AQI): Quédate en Interiores",
             description: "Toda la población puede comenzar a sentir efectos en la salud. Reduce al mínimo las actividades al aire libre, mantén puertas y ventanas cerradas y utiliza filtros de aire o purificadores si es posible.",
-            img: img2,
+            img: img3,
         },
         {
             title: "Calidad del Aire Muy Dañina o Peligrosa (201+ AQI): Máxima Precaución",
             description: "Evita salir de casa. Suspende toda actividad física, mantén tu hogar bien sellado y usa mascarillas N95 si es absolutamente necesario salir. Considera crear una 'habitación limpia' con un purificador de aire.",
-            img: img3,
+            img: img4,
         }
     ]
 
     function getRandomIndex() {
         const n = Math.floor(Math.random() * 5);
-        if(recomendationIndex === n){
+        if (recomendationIndex === n) {
             getRandomIndex();
-        }else {
+        } else {
             setRecomendationIndex(n);
         }
-      }
+    }
 
     function getMapUrl() {
         const foundLocalidad = localidades.find((l) => {
@@ -87,7 +89,7 @@ const MapView = () => {
                 <Input label={'Fecha'} type={'date'} />
                 <Input label={'Hora'} type={'time'} />
                 <div className='map-view__button'>
-                    <Button text={'BUSCAR'} action={getRandomIndex}/>
+                    <Button text={'BUSCAR'} action={getRandomIndex} />
                 </div>
 
             </form>
@@ -95,9 +97,11 @@ const MapView = () => {
         <div>
             <div style={{ position: 'relative' }}>
                 <div className="map-overlay">
-                    <h3>{!isNaN(recomendationIndex) ? recomendations[recomendationIndex].title : 'Selecciona una localidad, fecha y hora para ver los datos'}</h3>
-                    <p>{!isNaN(recomendationIndex) ? recomendations[recomendationIndex].description : '' }</p>
-                    {!isNaN(recomendationIndex) ? <img style={{width: '100%'}} src={recomendations[recomendationIndex].img} alt='img'/> : ''}
+                    <div>
+                        <h3>{!isNaN(recomendationIndex) ? recomendations[recomendationIndex].title : 'Selecciona una localidad, fecha y hora para ver los datos'}</h3>
+                        <p>{!isNaN(recomendationIndex) ? recomendations[recomendationIndex].description : ''}</p>
+                    </div>
+                    {!isNaN(recomendationIndex) ? <img style={{ width: '100%' }} src={recomendations[recomendationIndex].img} alt='img' /> : ''}
                 </div>
                 <iframe
                     title="Mapa de Bogotá con Google Maps"
