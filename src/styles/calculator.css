@@ -52,3 +52,19 @@
 .calculator__button button:hover {
     background-color: #7CB342; 
 }
+.calculator__title {
+    color: #007bff; /* Azul */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.calculator__main-box input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 14px;
+    box-sizing: border-box; 
+}
